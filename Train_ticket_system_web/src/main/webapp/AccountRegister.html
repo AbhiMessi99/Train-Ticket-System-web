@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <link rel="stylesheet" href="register_styles.css">
+    <link rel="icon" sizes="180x180" href="image/title.png">
+    <script>
+    function validateForm() {
+        // Get the values of the username, password, confirm password, mobile, and email fields
+        const username = document.querySelector("input[name='RegUsername']").value;
+        const password = document.querySelector("input[name='RegPassword']").value;
+        const confirmPassword = document.querySelector("input[name='RconfirmPassword']").value;
+        const mobile = document.querySelector("input[name='Mobile']").value;
+        const email = document.querySelector("input[name='email']").value;
+
+        // Regular expressions for validation
+        const usernameRegex = /^[a-zA-Z0-9]{6,}$/; // Alphanumeric, at least 6 characters
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const mobileRegex = /^\d{10}$/; // Exactly 10 digits
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Simple email regex
+
+        // Validate username
+        if (!usernameRegex.test(username)) {
+            alert("Username must be at least 6 characters long and contain no special characters.");
+            return false; // Prevent form submission
+        }
+
+        // Validate password
+        if (!passwordRegex.test(password)) {
+            alert("Password must be at least 8 characters, include at least 1 uppercase letter, 1 number, and 1 special character.");
+            return false; // Prevent form submission
+        }
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert("Password and confirm password do not match.");
+            return false; // Prevent form submission
+        }
+
+        // Validate mobile number
+        if (!mobileRegex.test(mobile)) {
+            alert("Mobile number must be exactly 10 digits.");
+            return false; // Prevent form submission
+        }
+
+        // Validate email
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false; // Prevent form submission
+        }
+
+        // If all validations pass, allow form submission
+        return true;
+    }
+</script>
+
+</head>
+<body background="image/background.jpg">
+    <div class="container">
+        <img src="image/Air_Trips.png" alt="Company Logo" class="logo">
+        
+        <form method="post" action="RegisteredServlet" class="glass-container" onsubmit="return validateForm();">
+            <div class="form-grid">
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="Lname" placeholder="Last Name" required>
+                <input type="text" name="Mobile" placeholder="Mobile Number" required>
+                <input type="text" name="RegUsername" placeholder="User Name" required>
+                <input type="password" name="RegPassword" placeholder="Password" required>
+                <input type="password" name="RconfirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <br>
+            <input type="text" name="email" placeholder="Email" required class="full-width">
+            <input type="text" name="address" placeholder="Address" required class="full-width">
+
+            <div class="button-container">
+                <input type="submit" value="Sign Up" class="rounded-button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

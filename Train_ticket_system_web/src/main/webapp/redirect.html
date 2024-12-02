@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <link rel="icon" sizes="180x180" href="image/title.png">
+  <link rel="stylesheet" href="redirect_styles.css">
+</head>
+<body background="image/background.jpg">
+  <div class="glass-container">
+    <p class="font">Payment processing. Please wait for <span id="countdown">5</span> seconds...</p>
+  </div>
+
+  <script>
+    function countdown() {
+      var count = 5;
+      var countdownElement = document.getElementById('countdown');
+
+      var timer = setInterval(function() {
+        count--;
+        countdownElement.textContent = count;
+
+        if (count <= 0) {
+          clearInterval(timer);
+          window.location.href = 'booked.jsp';
+        }
+      }, 1000);
+    }
+
+    window.onload = function() {
+      countdown();
+    };
+  </script>
+</body>
+</html>

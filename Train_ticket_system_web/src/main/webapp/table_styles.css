@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    background: #34b4eb;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #B8CD76;
+    color: #2B96BB;
+    border-radius: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.user-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.rounded-button {
+    background-color: #C1272D;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button styles on hover */
+.rounded-button:hover {
+    background-color: white;
+    color: #C1272D;
+    border: 1px solid #C1272D;
+}
+
+/* Center the button */
+.button-container {
+    text-align: center;
+    margin-top: 15px; /* Add some top margin */
+}

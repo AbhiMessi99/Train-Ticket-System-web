@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign in
+</title>
+<link rel="icon" sizes="180x180" href="image/title.png">
+<link rel="stylesheet" href="signin_styles.css">
+</head>
+<body background="image/background.jpg">
+    <div class="container">
+        <img src="image/Air_Trips.png" alt="Company Logo" class="logo">
+        
+        <form method="post" action="LoginServlet" class="glass-container">
+			<center><b><span style="color: red;">Incorrect Credentials!</span></b></center><br>
+            <div class="form-group">
+                <div class="input-icon">
+                    <img src="image/user-icon.png" alt="User Icon" class="icon">
+                    <input type="text" id="username" name="t1" placeholder="Enter User Name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-icon">
+                    <img src="image/lock-icon.png" alt="Lock Icon" class="icon">
+                    <input type="password" id="password" name="t2" placeholder="Enter Password" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                 <div class="forgot-password">
+                    <a href="ForgetPassword.html">Forgot Password?</a>
+                 </div>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Sign in" class="rounded-button">
+            </div>
+            
+            <div class="button-container">
+                <div class="signup">
+                    Already Registered? <a href="AccountRegister.html">Sign up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

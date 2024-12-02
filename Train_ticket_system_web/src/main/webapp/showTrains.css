@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+header {
+    background-color: white;
+    background-color: #fff; padding: 20px; border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+}
+
+.rounded-button {
+    background-color: #C1272D;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.rounded-button:hover {
+    background-color: white;
+    color: #C1272D;
+    border: 1px solid #C1272D;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.fare-container {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: revert;
+}
+
+.fare-section {
+    width: 20%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.fare-container label {
+	margin-top: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.button-container,
+.button-container-1,
+.button-container-2 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button-container-1,
+.button-container-2 {
+    display: inline-block;
+    justify-content: space-evenly;
+}
+
+.button-container-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.from {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.form-section {
+     margin-bottom: 35px;
+}
+
+.selectbox,
+.textbox {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}

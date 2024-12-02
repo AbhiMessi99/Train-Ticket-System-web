@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 600px; /* Maximum width for larger screens */
+    margin: auto; /* Center the container */
+    position: relative; /* Add relative positioning */
+}
+
+.logo {
+   position: absolute;
+    bottom: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 180px;
+    width: 250px;
+}
+
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Larger text boxes */
+input[type="text"] {
+    width: calc(100% - 10px); /* Adjusted width with gap */
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="password"] {
+    width: calc(100% - 10px); /* Adjusted width with gap */
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    margin-top: 15px;
+    grid-column: span 2; /* Make the address field span two columns */
+    margin-bottom: 10px; /* Add some bottom margin */
+}
+
+/* Rounded button with blue color */
+.rounded-button {
+    background-color: #C1272D;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button styles on hover */
+.rounded-button:hover {
+    background-color: white;
+    color: #C1272D;
+    border: 1px solid #C1272D;
+}
+
+/* Center the button */
+.button-container {
+    text-align: center;
+    margin-top: 15px; /* Add some top margin */
+}
+
+/* Styles for placeholder text */
+input::placeholder {
+    color: #7f8c8d;
+}

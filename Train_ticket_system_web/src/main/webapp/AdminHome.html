@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Train Code and Name Selection</title>
+  <link rel="stylesheet" href="adminhome_styles.css">
+</head>
+<body background="image/background.jpg">
+  <div class="glass-container">
+    <!-- Form for Adding Train -->
+    <form action="AddTrainServlet" method="post" onsubmit="validateForm(event)">
+      <div class="row-gap">
+        <p><span style="color: darkslateblue;">Train Detail:</span></p>
+      </div>
+      
+      <div class="form-row-1">
+        <input type="text" id="TrainNumber" name="Train_number" placeholder="Train Number" required>
+        <input type="text" id="TrainName" name="Train_Name" placeholder="Train Name" required>
+      </div>
+      <br>
+      <div class="form-row-1">
+        <input type="text" id="SourceInput" name="source" placeholder="Source Station" required>
+        <input type="text" id="DestinationInput" name="destination" placeholder="Destination Station" required>
+      </div>
+      <br>
+      <div class="form-row">
+        <input type="text" id="DepartureInput" name="departure" placeholder="Departure Time (HH:MM)" required>
+        <input type="text" id="ArrivalInput" name="arrival" placeholder="Arrival Time (HH:MM)" required>
+        <input type="text" id="DurationInput" name="duration" placeholder="Journey Duration" required>
+      </div>
+
+      <div class="row-gap">
+        <p><span style="color: darkslateblue;">Fare:</span></p>
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="SleeperFareInput" name="sleeper" placeholder="Sleeper" required>
+        <input type="text" id="AC3TierFareInput" name="ac3tier" placeholder="AC 3-Tier" required>
+        <input type="text" id="AC2TierFareInput" name="ac2tier" placeholder="AC 2-Tier" required>
+        <input type="text" id="AC1TierFareInput" name="ac1tier" placeholder="AC 1-Tier" required>
+      </div>
+
+      <div class="row-gap">
+        <p><span style="color: darkslateblue;">Seat Availability in each class:</span></p>
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="SleeperSeatInput" name="sleeperseat" placeholder="Sleeper" required>
+        <input type="text" id="AC3TierSeatInput" name="ac3tierseat" placeholder="AC 3-Tier" required>
+        <input type="text" id="AC2TierSeatInput" name="ac2tierseat" placeholder="AC 2-Tier" required>
+        <input type="text" id="AC1TierSeatInput" name="ac1tierseat" placeholder="AC 1-Tier" required>
+      </div>
+
+      <br>
+      <div class="button-container">
+        <input type="submit" value="Add Train" class="rounded-button">
+      </div>
+    </form>
+
+    <br>
+    <div class="button-container">
+      <!-- Sign Out Link -->
+      <a href="AdminSignIn.html"
+         class="cancel-link"
+         style="text-decoration: none; color: black;"
+         onmouseover="this.style.color='#777'; this.style.textDecoration='underline';"
+         onmouseout="this.style.color='black'; this.style.textDecoration='none';">
+         Sign Out
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript for Validation -->
+  <script>
+    function validateForm(event) {
+      const trainNumber = document.getElementById("TrainNumber").value;
+      const departureTime = document.getElementById("DepartureInput").value;
+      const arrivalTime = document.getElementById("ArrivalInput").value;
+
+      // Validate train number format (numeric only)
+      if (!/^\d+$/.test(trainNumber)) {
+        alert("Train number must be numeric.");
+        event.preventDefault(); // Stop form submission
+        return;
+      }
+
+      // Validate time format (HH:MM)
+      const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
+      if (!timePattern.test(departureTime) || !timePattern.test(arrivalTime)) {
+        alert("Please enter time in HH:MM format.");
+        event.preventDefault(); // Stop form submission
+        return;
+      }
+
+      // If no validation errors, allow form submission
+      console.log("Form is valid. Submitting...");
+    }
+  </script>
+</body>
+</html>

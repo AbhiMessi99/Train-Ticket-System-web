@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* Resetting default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the form */
+#myForm {
+  position: relative; /* Relative positioning for the form */
+}
+
+/* Style for the submit button */
+#myForm button[type="submit"] {
+  position: absolute; /* Positions the button */
+  top: 10px; /* Adjust this value to place the button at desired distance from the top */
+  right: 10px; /* Adjust this value to place the button at desired distance from the right */
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Additional styles for hover effect */
+#myForm button[type="submit"]:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}

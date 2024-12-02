@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.logo {
+    position: absolute;
+    bottom: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 180px;
+    width: 250px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon .icon {
+    position: absolute;
+    left: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 40px); /* Adjusted width for icon and padding */
+    padding: 15px;
+    padding-left: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.forgot-password a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.rounded-button {
+    background-color: #C1272D;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.rounded-button:hover {
+    background-color: white;
+    color: #C1272D;
+    border: 1px solid #C1272D;
+}
+
+.button-container-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.signup a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.signup a:hover {
+    color: #333;
+    text-decoration: underline;
+}@charset "UTF-8";

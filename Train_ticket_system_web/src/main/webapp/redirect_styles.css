@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* redirect_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.glass-container {
+   background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+}
+
+#countdown {
+    color: red;
+    font-weight: bold;
+}
+
+/* Rounded button with blue color */
+.rounded-button {
+    background-color: #C1272D;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Button styles on hover */
+.rounded-button:hover {
+    background-color: white;
+    color: #C1272D;
+    border: 1px solid #C1272D;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.font{
+	font-size: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.pp {
+    margin-bottom: 20px; /* Add margin to create a gap */
+    display: block; /* Make the label a block element */
+    font-size: 16px;
+    
+}
+
+.rounded-textbox {
+    border-radius: 10px;
+    padding: 20px; /* Adjusted padding */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 100%;
+}
